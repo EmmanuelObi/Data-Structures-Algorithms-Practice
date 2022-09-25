@@ -23,6 +23,6 @@ var frequencySort = function(s) {
         }
     }
     
-    return result
+    return result.join("")
     
 };
