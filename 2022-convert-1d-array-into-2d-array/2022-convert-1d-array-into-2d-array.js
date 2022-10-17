@@ -23,11 +23,15 @@ var construct2DArray = function(original, m, n) {
 //     }
     
 //     return []
-     if(original.length != m*n) return []
-    let result = Array.from(Array(m), () => new Array(n));
     
-    for(let i = 0; i < m*n; i++) {
-        result[Math.floor(i/n)][i%n] = original[i];
+    if(m * n === original.length) {
+        let result = Array.from(Array(m), () => new Array(n));
+    
+        for(let i = 0; i < m*n; i++) {
+            result[Math.floor(i/n)][i%n] = original[i];
+        }
+        return result
     }
-    return result
+    
+    return []
 };
