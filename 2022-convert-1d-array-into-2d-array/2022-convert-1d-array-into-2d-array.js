@@ -23,7 +23,7 @@ var construct2DArray = function(original, m, n) {
 //     }
     
 //     return []
-      if(original.length != m*n) return []
+     if(original.length != m*n) return []
     let result = Array.from(Array(m), () => new Array(n));
     
     for(let i = 0; i < m*n; i++) {
